@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6c7de17-f4bb-4c41-ab94-43edcdb17577" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="d6c7de17-f4bb-4c41-ab94-43edcdb17577" name="Changes" comment="refactor buikd.gradle">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/po/SearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/SearchPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/po/SearchResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/SearchResultPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Singleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Singleton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/ui/UiSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/ui/UiSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/ui/api/ApiSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/ui/api/ApiSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/api.google.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/api.google.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/log4j2.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,6 +192,18 @@
       <option name="presentableId" value="Default" />
       <updated>1697290426385</updated>
     </task>
+    <task id="LOCAL-00001" summary="refactor buikd.gradle">
+      <created>1697377064471</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1697377064471</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="refactor buikd.gradle" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor buikd.gradle" />
   </component>
 </project>

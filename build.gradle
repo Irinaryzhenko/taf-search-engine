@@ -22,22 +22,8 @@ dependencies {
 
 }
 test {
-    test {
-        useJUnit()
+           useJUnit()
+
     }
 
-}
-task cucumber() {
-    dependsOn assemble
-    doLast {
-        javaexec {
-            main = 'io.cucumber.core.cli.Main'
-            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
-            args = [
-                    '--glue', 'src/test/java/steps/ui/api', // Путь к пакету с вашими степ-дефинициями
-                    'src/test/resources/features', // Путь к фич-файлам
-                    '--tags', '@smoke' // Фильтрация тестов по аннотации @smoke
-            ]
-        }
-    }
-}
+
