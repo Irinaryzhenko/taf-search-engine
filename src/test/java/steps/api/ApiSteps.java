@@ -1,4 +1,4 @@
-package steps.ui.api;
+package steps.api;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -11,12 +11,11 @@ import org.apache.hc.core5.http.io.entity.EntityUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
-
 import java.io.IOException;
 
 public class ApiSteps {
     CloseableHttpClient httpclient = HttpClients.createDefault();
-   CloseableHttpResponse httpResponse;
+    CloseableHttpResponse httpResponse;
     private static final Logger logger = LogManager.getLogger(ApiSteps.class);
 
     @When("I seng get-request to  {string}")

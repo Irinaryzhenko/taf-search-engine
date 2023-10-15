@@ -4,9 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6c7de17-f4bb-4c41-ab94-43edcdb17577" name="Changes" comment="refactor buikd.gradle">
+    <list default="true" id="d6c7de17-f4bb-4c41-ab94-43edcdb17577" name="Changes" comment="refactor build.gradle">
+      <change afterPath="$PROJECT_DIR$/src/test/java/testRunner/RunTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/po/SearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/SearchPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/po/SearchResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/SearchResultPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Singleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/driver/Singleton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/ui/UiSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/ui/UiSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/ui/api/ApiSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/api/ApiSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/ui.google.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/ui.google.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/log4j2.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +85,12 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="Cucumber Java.Feature: api.google (1)">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Desktop\Automation\taf-search-engine\src\test\java\utils" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Cucumber Java.Feature: ui.google">
     <configuration name="Feature: api.google (1)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/api.google.feature" />
@@ -134,14 +147,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Perform search" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Feature: ui.google" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/scenarios/google.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ui.google.feature" />
+      <option name="GLUE" value="steps.ui" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="taf-search-engine.test" />
-      <option name="NAME_FILTER" value="^Perform search$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Perform search$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Perform search" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: ui.google" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -175,11 +188,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Feature: ui.google" />
         <item itemvalue="Cucumber Java.Feature: api.google (1)" />
         <item itemvalue="Cucumber Java.Scenario: perform api google search" />
         <item itemvalue="Cucumber Java.Feature: api.google" />
         <item itemvalue="Cucumber Java.Feature: google" />
-        <item itemvalue="Cucumber Java.Scenario: Perform search" />
       </list>
     </recent_temporary>
   </component>
@@ -199,11 +212,19 @@
       <option name="project" value="LOCAL" />
       <updated>1697377064471</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="refactor build.gradle">
+      <created>1697382794527</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1697382794528</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="refactor buikd.gradle" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor buikd.gradle" />
+    <MESSAGE value="refactor build.gradle" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor build.gradle" />
   </component>
 </project>

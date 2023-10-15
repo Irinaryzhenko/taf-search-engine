@@ -12,7 +12,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import po.SearchPage;
 import po.SearchResultPage;
-import utils.Singleton;
+import driver.Singleton;
 import java.util.concurrent.TimeUnit;
 
 public class UiSteps {
@@ -45,7 +45,7 @@ public class UiSteps {
         searchField.submit();
     }
     @Then("I should see search results contains {string}  and {string}")
-    public void iShouldSeeSearchResultsContainsAnd(String expectedTitle, String expectedUrl) {
+    public void iShouldSeeSearchResultsContains(String expectedTitle, String expectedUrl) {
         logger.info("Checking result for title: {} and url: {}", expectedTitle, expectedUrl);
         System.out.println(expectedUrl);
         System.out.println(expectedTitle);
