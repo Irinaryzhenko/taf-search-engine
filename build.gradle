@@ -24,3 +24,7 @@ test {
            useJUnit()
     //systemProperty "file.encoding", "utf-8"
 }
+task runTest(type: JavaExec) {
+    main = 'src/test/java/testRunner/RunTest.java' // Укажите полный путь к вашему Run-классу
+    classpath = sourceSets.main.runtimeClasspath
+}

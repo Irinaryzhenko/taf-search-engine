@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
         plugin = "pretty",
         tags = "@smoke",
         features = "src/test/resources/features",
-        glue = "steps.api",
+        glue = "java/steps/api",
         monochrome = true)
 
 public class RunTest {
