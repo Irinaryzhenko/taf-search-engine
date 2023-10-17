@@ -1,5 +1,6 @@
 package steps.ui;
 
+import driver.Singleton;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -12,7 +13,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import po.SearchPage;
 import po.SearchResultPage;
-import driver.Singleton;
+
 import java.util.concurrent.TimeUnit;
 
 public class UiSteps {
@@ -21,11 +22,13 @@ public class UiSteps {
 
     @Given("Open the website")
     public void openTheWebsite() {
-        logger.info("Openning the website");
+        logger.info("Opening the website");
         driver = Singleton.getDriver();
         SearchPage searchPage = new SearchPage();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        searchPage.acceptCookies();
+       try {
+           searchPage.acceptCookies();
+       } catch (Exception e) {};
     }
 
     @When("I enter {string} into the search field")
@@ -47,8 +50,33 @@ public class UiSteps {
     @Then("I should see search results contains {string}  and {string}")
     public void iShouldSeeSearchResultsContains(String expectedTitle, String expectedUrl) {
         logger.info("Checking result for title: {} and url: {}", expectedTitle, expectedUrl);
-        System.out.println(expectedUrl);
-        System.out.println(expectedTitle);
+//            List<WebElement> results = driver.findElements(By.xpath("//div[@class = 'srKDX cvP2Ce']"));
+//            WebElement nameElement;
+//            String name;
+//            int index = 0;
+//            String actualText = "";
+//            for (int i = 0; i < results.size(); i++) {
+//                nameElement = results.get(i).findElement(By.xpath(".//a[@jsname='UWckNb']"));
+//                name = nameElement.getText();
+//                if (name.contains(expectedTitle)) {
+//                    index= i;
+//                    actualText = name;
+//                }
+//            }
+//            System.out.println(index);
+//        try {
+//            Thread.sleep(1000);
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
+//        WebElement linkElement = results.get(index).findElement(By.xpath(".//div[@class = 'srKDX cvP2Ce']//cite"));
+//            String actualLink = linkElement.getAttribute("href");
+//        Assert.assertEquals(expectedTitle, actualText);
+//        Assert.assertEquals(expectedUrl, actualLink);
+//
+//        }
+//        System.out.println(expectedUrl);
+//        System.out.println(expectedTitle);
         SearchResultPage searchResultPage = new SearchResultPage();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         String actualTitle = driver.findElement(By.xpath(searchResultPage.getTitle())).getText();

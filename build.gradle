@@ -8,6 +8,7 @@ version '1.0-SNAPSHOT'
 repositories {
     mavenCentral()
 }
+tasks.withType(JavaCompile) { options.encoding = "UTF-8" }
 
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
@@ -22,9 +23,6 @@ dependencies {
 
 test {
            useJUnit()
-    //systemProperty "file.encoding", "utf-8"
+
 }
-task runTest(type: JavaExec) {
-    main = 'src/test/java/testRunner/RunTest.java' // Укажите полный путь к вашему Run-классу
-    classpath = sourceSets.main.runtimeClasspath
-}
+
