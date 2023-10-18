@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d6c7de17-f4bb-4c41-ab94-43edcdb17577" name="Changes" comment="reformat code&#10;add test runner">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/po/SearchResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/SearchResultPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/ui/UiSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/ui/UiSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/ui.google.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/ui.google.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,9 +182,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Cucumber Java.Feature: ui.google" />
-        <item itemvalue="Cucumber Java.Scenario: Perform search" />
         <item itemvalue="Cucumber Java.Feature: api.google (1)" />
         <item itemvalue="Cucumber Java.Scenario: perform api google search" />
+        <item itemvalue="Cucumber Java.Scenario: Perform search" />
         <item itemvalue="Cucumber Java.Feature: api.google" />
       </list>
     </recent_temporary>

@@ -2,6 +2,7 @@ Feature: Search on Google
 
   Background: I am on the Google homepage
       Given Open the website
+    @smoke
   Scenario: Perform search
   When I enter "Минск" into the search field
     When I submit the search
