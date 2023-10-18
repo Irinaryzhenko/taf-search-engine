@@ -1,4 +1,4 @@
-package steps;
+package com.google.search.steps;
 
 import driver.Singleton;
 import io.cucumber.java.After;

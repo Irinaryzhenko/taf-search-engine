@@ -1,4 +1,4 @@
-package steps;
+package com.google.search.steps;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
