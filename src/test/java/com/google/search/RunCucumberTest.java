@@ -1,12 +1,14 @@
-package com.google.search.testRunner;
+package com.google.search;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
+        plugin = "pretty",
         features = "src/test/resources/features",
-        glue = "com/google/search/steps")
+        glue = "src/test/java/com/google/search/steps",
+        tags = "@smoke")
 
-public class RunTest {
+public class RunCucumberTest {
 }

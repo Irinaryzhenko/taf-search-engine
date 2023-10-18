@@ -20,6 +20,8 @@ import java.util.concurrent.TimeUnit;
 public class UiSteps {
     private static final Logger logger = LogManager.getLogger(UiSteps.class);
     WebDriver driver;
+    private static String searchTitleCity;
+    private static String searchLink;
 
     @Given("Open the website")
     public void openTheWebsite() {
@@ -34,11 +36,12 @@ public class UiSteps {
 
     @When("I enter {string} into the search field")
     public void iEnterIntoTheSearchField(String searchText) {
+        searchTitleCity = searchText;
         SearchPage searchPage = new SearchPage();
         logger.info("Entering the text: {}", searchText);
         WebElement searchField = driver.findElement(By.xpath(searchPage.getSearchInputField()));
         JavascriptExecutor executor = (JavascriptExecutor) driver;
-        executor.executeScript("arguments[0].value = arguments[1];", searchField, searchText);
+        executor.executeScript("arguments[0].value = arguments[1];", searchField, searchTitleCity);
     }
 
     @When("I submit the search")
@@ -51,39 +54,14 @@ public class UiSteps {
     @Then("I should see search results contains {string}  and {string}")
     public void iShouldSeeSearchResultsContains(String expectedTitle, String expectedUrl) {
         logger.info("Checking result for title: {} and url: {}", expectedTitle, expectedUrl);
-//            List<WebElement> results = driver.findElements(By.xpath("//div[@class = 'srKDX cvP2Ce']"));
-//            WebElement nameElement;
-//            String name;
-//            int index = 0;
-//            String actualText = "";
-//            for (int i = 0; i < results.size(); i++) {
-//                nameElement = results.get(i).findElement(By.xpath(".//a[@jsname='UWckNb']"));
-//                name = nameElement.getText();
-//                if (name.contains(expectedTitle)) {
-//                    index= i;
-//                    actualText = name;
-//                }
-//            }
-//            System.out.println(index);
-//        try {
-//            Thread.sleep(1000);
-//        } catch (InterruptedException e) {
-//            throw new RuntimeException(e);
-//        }
-//        WebElement linkElement = results.get(index).findElement(By.xpath(".//div[@class = 'srKDX cvP2Ce']//cite"));
-//            String actualLink = linkElement.getAttribute("href");
-//        Assert.assertEquals(expectedTitle, actualText);
-//        Assert.assertEquals(expectedUrl, actualLink);
-//
-//        }
-//        System.out.println(expectedUrl);
-//        System.out.println(expectedTitle);
         SearchResultPage searchResultPage = new SearchResultPage();
+        expectedTitle = searchTitleCity;
+        searchLink = expectedUrl;
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         String actualTitle = driver.findElement(By.xpath(searchResultPage.getTitle())).getText();
         String actualUrl = driver.findElement(By.xpath(searchResultPage.getUrl())).getText();
-        Assertions.assertTrue(actualTitle.contains(expectedTitle));
-        Assertions.assertTrue(actualUrl.contains(expectedUrl));
+        Assertions.assertTrue(actualTitle.contains(searchTitleCity));
+        Assertions.assertTrue(actualUrl.contains(searchLink));
     }
 
     @After
