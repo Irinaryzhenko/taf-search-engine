@@ -1,6 +1,7 @@
 package steps.ui;
 
 import driver.Singleton;
+import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -85,7 +86,7 @@ public class UiSteps {
         Assertions.assertTrue(actualUrl.contains(expectedUrl));
     }
 
-    @Then("I close browser")
+    @After
     public void iCloseBrowser() {
         Singleton.quitDriver();
     }
